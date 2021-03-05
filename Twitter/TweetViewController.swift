@@ -10,6 +10,7 @@ import UIKit
 
 class TweetViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,17 @@ class TweetViewController: UIViewController {
     }
     
     @IBAction func cancelPress(_ sender: Any) {
+        if (!textField.text.isEmpty){
+            TwitterAPICaller.client?.postTweet(tweetString: textField.text, success: {
+                self.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                print("Error posting tweet \(error)")
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
+        else{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     /*
