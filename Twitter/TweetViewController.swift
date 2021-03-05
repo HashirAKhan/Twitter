@@ -13,6 +13,7 @@ class TweetViewController: UIViewController {
     @IBOutlet weak var textField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
