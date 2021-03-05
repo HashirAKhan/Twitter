@@ -137,7 +137,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="fNg-W2-t5o"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -151,7 +150,20 @@
                             <constraint firstItem="V51-bx-Y4R" firstAttribute="leading" secondItem="Lh4-fJ-Gt5" secondAttribute="leading" constant="20" id="j2V-Cc-kYH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4Yx-q5-dJm"/>
+                    <navigationItem key="navigationItem" id="4Yx-q5-dJm">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="9NY-wF-4rh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelPress:" destination="vG4-CB-Q0h" id="bAA-AX-khM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="Q2K-tg-S44">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="tweetPress:" destination="vG4-CB-Q0h" id="iJu-ru-RxR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCs-DJ-lWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

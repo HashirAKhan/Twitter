@@ -16,7 +16,13 @@ class TweetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tweetPress(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelPress(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
