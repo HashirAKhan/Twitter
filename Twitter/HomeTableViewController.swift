@@ -18,7 +18,7 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTweets()
+//        getTweets()
         
         myRefreshControl.addTarget(self, action: #selector(getTweets), for: .valueChanged)
         self.tableView.refreshControl = myRefreshControl
@@ -26,7 +26,8 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getTweets()
+        self.getTweets()
+        print("Load Table")
     }
     
     @objc func getTweets(){

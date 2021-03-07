@@ -19,12 +19,9 @@ class TweetViewController: UIViewController {
     }
     
     @IBAction func tweetPress(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func cancelPress(_ sender: Any) {
         if (!textField.text.isEmpty){
             TwitterAPICaller.client?.postTweet(tweetString: textField.text, success: {
+                print("tweet success")
                 self.dismiss(animated: true, completion: nil)
             }, failure: { (error) in
                 print("Error posting tweet \(error)")
@@ -36,14 +33,9 @@ class TweetViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelPress(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
 
 }
